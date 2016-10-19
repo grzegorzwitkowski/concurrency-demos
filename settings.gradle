@@ -1,0 +1,3 @@
+rootProject.name = 'concurrency-demos'
+include 'array-blocking-queue'
+

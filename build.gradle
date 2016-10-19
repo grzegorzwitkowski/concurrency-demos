@@ -1,0 +1,34 @@
+buildscript {
+    ext.ver = [
+            kotlin: "1.0.4"
+    ]
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${ver.kotlin}"
+    }
+}
+
+group "com.github.grzegorzwitkowski"
+
+version "1.0-SNAPSHOT"
+
+subprojects {
+
+    apply plugin: "kotlin"
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "org.jetbrains.kotlin:kotlin-stdlib:${ver.kotlin}"
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "3.1"
+}
